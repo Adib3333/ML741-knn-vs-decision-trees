@@ -1,0 +1,23 @@
+# dataset is supplied with the assignment and is not redistributed here
+*.csv
+!results/*.csv
+networkTraffic.csv
+
+# the report is not published here
+report/
+*.pdf
+
+# LaTeX build artefacts
+*.aux
+*.log
+*.out
+*.bbl
+*.blg
+*.synctex.gz
+*.fls
+*.fdb_latexmk
+
+# python
+__pycache__/
+*.pyc
+.ipynb_checkpoints/

@@ -1,0 +1,4 @@
+configuration,macro_f1,gain
+"original tree (alpha=1.0, balanced)",0.5484,0.0
++ tuned class-weight exponent alpha=0.75,0.5701,0.021700000000000053
++ cost-sensitive decision multipliers,0.5893,0.019199999999999995

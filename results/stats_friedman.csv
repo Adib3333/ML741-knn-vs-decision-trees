@@ -1,0 +1,2 @@
+metric,statistic,p_value,alpha,reject_h0,n_groups,n_folds
+f1_macro,30.0,1.3800570312932553e-06,0.05,True,4,10

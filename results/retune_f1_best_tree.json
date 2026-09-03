@@ -1,0 +1,12 @@
+{
+  "tree": {
+    "alpha": 0.75,
+    "criterion": "entropy",
+    "max_depth": 13,
+    "min_samples_leaf": 2,
+    "ccp_alpha": 1e-05,
+    "f1_mean": 0.5585094581477575,
+    "f1_std": 0.008845042139248985,
+    "bal_mean": 0.6356758222353359
+  }
+}

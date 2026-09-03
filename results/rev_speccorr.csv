@@ -1,0 +1,4 @@
+feature_a,feature_b,correlation,exactly_one
+sbytes,sloss,0.9957715772406762,False
+dbytes,dloss,0.9967111338314694,False
+is_ftp_login,ct_ftp_cmd,0.9988554882935667,False

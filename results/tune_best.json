@@ -1,0 +1,19 @@
+{
+  "knn": {
+    "k": 31,
+    "weights": "distance",
+    "metric": "manhattan",
+    "bal_mean": 0.5283
+  },
+  "tree": {
+    "criterion": "entropy",
+    "max_depth": 13,
+    "min_samples_leaf": 2,
+    "class_weight": "$\\alpha=0.75$",
+    "ccp_alpha": 1e-05,
+    "bal_mean": 0.5585094581477575
+  },
+  "tune_fraction": 0.25,
+  "tune_folds": 5,
+  "seed": 42
+}
