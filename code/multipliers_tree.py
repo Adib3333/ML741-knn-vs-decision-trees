@@ -1,4 +1,4 @@
-"""Step 8: cost sensitive decision multipliers for the tree.
+"""Cost sensitive decision multipliers for the tree.
 
 The per-class breakdown says everything left is a precision loss on the rare
 classes. The tree finds 77.7 per cent of Worms, but only 29.1 per cent of what it
@@ -26,11 +26,11 @@ import pandas as pd
 from sklearn.model_selection import StratifiedKFold, train_test_split
 from sklearn.pipeline import Pipeline
 
-from a2_common import (RANDOM_SEED, OUT_DIR, CLASS_NAMES, CLASS_ORDER,
+from common import (RANDOM_SEED, OUT_DIR, CLASS_NAMES, CLASS_ORDER,
                        ensure_dirs, load_data, numeric_columns,
                        build_ct_preprocessor, log)
-from a2_step4_evaluate import TUNE_FRACTION
-from a2_step6_retune_f1 import PowerWeightedTree
+from evaluate import TUNE_FRACTION
+from retune_f1 import PowerWeightedTree
 
 LOGP = f"{OUT_DIR}/thresholds_log.txt"
 INNER_FOLDS = 5

@@ -1,4 +1,4 @@
-"""Step 3b: normalisation and redundancy study for k-NN.
+"""Normalisation and redundancy study for k-NN.
 
 The first ablation said min-max lost to z-score, and that dropping correlated
 features hurt rather than helped. Both go against the textbook expectation, so
@@ -29,7 +29,7 @@ from sklearn.preprocessing import (FunctionTransformer, MinMaxScaler,
                                    RobustScaler, StandardScaler)
 from sklearn.metrics import balanced_accuracy_score, f1_score
 
-from a2_common import (RANDOM_SEED, OUT_DIR, FIG_DIR, NOMINAL,
+from common import (RANDOM_SEED, OUT_DIR, FIG_DIR, NOMINAL,
                        MIN_LEVEL_FREQUENCY, CORR_THRESHOLD, ensure_dirs,
                        load_data, numeric_columns, RareLevelGrouper,
                        CorrelationFilter, ConstantFilter, Timer, log)
@@ -44,7 +44,7 @@ FOLDS = 5
 FRACTION = 0.35
 LOGP = f"{OUT_DIR}/scaling_log.txt"
 
-# tuned k-NN control parameters from step 2
+# tuned k-NN control parameters from tune.py
 K, WEIGHTS, METRIC = 6, "distance", "manhattan"
 
 

@@ -1,4 +1,4 @@
-"""Step 9: the same decision multipliers for k-NN.
+"""The same decision multipliers for k-NN.
 
 k-NN also emits a class distribution, namely the weighted share of the k
 neighbours belonging to each class,
@@ -27,11 +27,11 @@ import pandas as pd
 from sklearn.model_selection import StratifiedKFold, train_test_split
 from sklearn.neighbors import NearestNeighbors
 
-from a2_common import (RANDOM_SEED, OUT_DIR, CLASS_NAMES, CLASS_ORDER,
+from common import (RANDOM_SEED, OUT_DIR, CLASS_NAMES, CLASS_ORDER,
                        ensure_dirs, load_data, numeric_columns,
                        build_knn_preprocessor, log)
-from a2_step4_evaluate import TUNE_FRACTION
-from a2_step8_thresholds import macro_f1_from_counts, fit_multipliers
+from evaluate import TUNE_FRACTION
+from multipliers_tree import macro_f1_from_counts, fit_multipliers
 
 LOGP = f"{OUT_DIR}/knn_thresholds_log.txt"
 K_LIST = [5, 15, 31]

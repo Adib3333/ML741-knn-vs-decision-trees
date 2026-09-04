@@ -1,4 +1,4 @@
-"""Step 1: data quality audit.
+"""Data quality audit.
 
 Produces the evidence behind the data quality section of the report, plus three
 figures.
@@ -19,7 +19,7 @@ import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 
-from a2_common import (DATA_PATH, OUT_DIR, FIG_DIR, TARGET, ID_COL, NOMINAL,
+from common import (DATA_PATH, OUT_DIR, FIG_DIR, TARGET, ID_COL, NOMINAL,
                        MISSING_TOKEN, CLASS_NAMES, CLASS_ORDER, ensure_dirs, log)
 
 # figure text at 10pt to match the 10pt IEEE body text (writing rule 25b)

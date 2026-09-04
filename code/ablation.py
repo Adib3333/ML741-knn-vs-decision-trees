@@ -1,4 +1,4 @@
-"""Step 3: preprocessing ablation.
+"""Preprocessing ablation.
 
 The brief wants a justification for every step applied and every issue left
 alone, so each transformation is removed or added one at a time and the effect on
@@ -26,7 +26,7 @@ from sklearn.preprocessing import (MinMaxScaler, OneHotEncoder, OrdinalEncoder,
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.metrics import balanced_accuracy_score, f1_score
 
-from a2_common import (RANDOM_SEED, OUT_DIR, FIG_DIR, NOMINAL, ID_COL,
+from common import (RANDOM_SEED, OUT_DIR, FIG_DIR, NOMINAL, ID_COL,
                        MIN_LEVEL_FREQUENCY, CORR_THRESHOLD, DATA_PATH,
                        ensure_dirs, load_data, numeric_columns,
                        build_knn_preprocessor, build_ct_preprocessor,

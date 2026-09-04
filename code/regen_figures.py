@@ -9,7 +9,7 @@ from __future__ import annotations
 import os
 import numpy as np
 import pandas as pd
-from a2_common import FIG_DIR
+from common import FIG_DIR
 import matplotlib
 
 matplotlib.use("Agg")

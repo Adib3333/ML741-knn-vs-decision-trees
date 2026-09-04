@@ -1,4 +1,4 @@
-"""Step 2: control parameter tuning.
+"""Control parameter tuning.
 
 The data is split once, with stratification, into a 25 per cent tuning partition
 and a 75 per cent evaluation partition. Nothing here touches the evaluation
@@ -31,7 +31,7 @@ from sklearn.tree import DecisionTreeClassifier
 from sklearn.pipeline import Pipeline
 from sklearn.metrics import balanced_accuracy_score, f1_score
 
-from a2_common import (RANDOM_SEED, OUT_DIR, FIG_DIR, ensure_dirs, load_data,
+from common import (RANDOM_SEED, OUT_DIR, FIG_DIR, ensure_dirs, load_data,
                        numeric_columns, build_knn_preprocessor,
                        build_ct_preprocessor, Timer, log)
 

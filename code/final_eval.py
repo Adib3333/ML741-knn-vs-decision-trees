@@ -1,6 +1,7 @@
-"""Step 10: all four configurations under the tuned decision rule.
+"""All four configurations under the tuned decision rule.
 
-Steps 8 and 9 fitted multipliers for the bare tree and for bare k-NN. The two
+multipliers_tree and multipliers_knn fitted multipliers for the bare tree and
+for bare k-NN. The two
 SMOTE configurations need the same rule, otherwise the comparison confounds the
 resampling scheme with the decision rule.
 
@@ -22,12 +23,12 @@ from sklearn.metrics import (accuracy_score, balanced_accuracy_score, f1_score,
                              matthews_corrcoef, cohen_kappa_score, confusion_matrix)
 from imblearn.pipeline import Pipeline as ImbPipeline
 
-from a2_common import (RANDOM_SEED, OUT_DIR, CLASS_NAMES, CLASS_ORDER,
+from common import (RANDOM_SEED, OUT_DIR, CLASS_NAMES, CLASS_ORDER,
                        ensure_dirs, load_data, numeric_columns,
                        build_knn_preprocessor, build_ct_preprocessor, log)
-from a2_step4_evaluate import CappedSMOTE, TUNE_FRACTION
-from a2_step6_retune_f1 import PowerWeightedTree
-from a2_step8_thresholds import macro_f1_from_counts, fit_multipliers
+from evaluate import CappedSMOTE, TUNE_FRACTION
+from retune_f1 import PowerWeightedTree
+from multipliers_tree import macro_f1_from_counts, fit_multipliers
 
 LOGP = f"{OUT_DIR}/allconfig_log.txt"
 KNN_K = 31
@@ -172,7 +173,7 @@ def main():
 
     # --- statistics
     from scipy import stats
-    from a2_step4_evaluate import holm
+    from evaluate import holm
     names = list(makers)
     cols = [folds[folds.configuration == n].sort_values("fold")["f1_macro"].to_numpy()
             for n in names]
@@ -196,7 +197,7 @@ def main():
     pd.DataFrame([dict(metric="f1_macro", statistic=chi2, p_value=p, alpha=0.05,
                        reject_h0=bool(p < 0.05), n_groups=4, n_folds=10)]).to_csv(
         f"{OUT_DIR}/v2_friedman.csv", index=False)
-    log("step 10 complete", LOGP)
+    log("final evaluation complete", LOGP)
 
 
 if __name__ == "__main__":

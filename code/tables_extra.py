@@ -8,7 +8,7 @@ from __future__ import annotations
 import re
 import pandas as pd
 
-from a2_common import OUT_DIR
+from common import OUT_DIR
 
 NUMBERS = "report/numbers.tex"
 WORDS = {1: "one", 2: "two", 3: "three", 4: "four", 5: "five"}

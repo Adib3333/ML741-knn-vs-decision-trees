@@ -1,4 +1,4 @@
-"""Step 4: evaluation and statistical analysis.
+"""Evaluation and statistical analysis.
 
 Stratified ten-fold cross-validation of four configurations on the evaluation
 partition, which no tuning decision has seen: k-NN, k-NN + SMOTE, tree, and
@@ -38,7 +38,7 @@ from sklearn.metrics import (accuracy_score, balanced_accuracy_score,
 from imblearn.over_sampling import SMOTE
 from imblearn.pipeline import Pipeline as ImbPipeline
 
-from a2_common import (RANDOM_SEED, OUT_DIR, FIG_DIR, CLASS_NAMES, CLASS_ORDER,
+from common import (RANDOM_SEED, OUT_DIR, FIG_DIR, CLASS_NAMES, CLASS_ORDER,
                        ensure_dirs, load_data, numeric_columns,
                        build_knn_preprocessor, build_ct_preprocessor,
                        Timer, log)

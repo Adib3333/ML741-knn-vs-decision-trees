@@ -1,7 +1,7 @@
-"""Step 12: rebuild the generator inputs after the macro F1 revision.
+"""Rebuild the generator inputs after the macro F1 revision.
 
 The report quotes no number literally. Every figure in the prose is a macro that
-a2_step5_tables.py emits from the result files, so rewriting those files here
+tables.py emits from the result files, so rewriting those files here
 pushes the revised results through the whole document without anything being
 retyped.
 
@@ -18,7 +18,7 @@ import numpy as np
 import pandas as pd
 from scipy import stats
 
-from a2_common import OUT_DIR, CLASS_NAMES, CLASS_ORDER
+from common import OUT_DIR, CLASS_NAMES, CLASS_ORDER
 
 ORDER = ["k-NN", "k-NN + SMOTE", "tree", "tree + SMOTE"]
 BACKUP = f"{OUT_DIR}/_v1_backup"

@@ -1,4 +1,4 @@
-"""Step 6: control parameter selection under macro F1.
+"""Control parameter selection under macro F1.
 
 The first search maximised balanced accuracy, which is the mean per-class recall
 and therefore charges nothing for false positives. Macro F1 charges for precision
@@ -28,10 +28,10 @@ from sklearn.neighbors import KNeighborsClassifier
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.pipeline import Pipeline
 
-from a2_common import (RANDOM_SEED, OUT_DIR, ensure_dirs, load_data,
+from common import (RANDOM_SEED, OUT_DIR, ensure_dirs, load_data,
                        numeric_columns, build_knn_preprocessor,
                        build_ct_preprocessor, log)
-import a2_step2_tune as T
+import tune as T
 
 LOGP = f"{OUT_DIR}/retune_f1_log.txt"
 

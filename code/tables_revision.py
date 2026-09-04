@@ -1,6 +1,6 @@
 """Tables and macros new to the macro F1 revision.
 
-Called from a2_step5_tables.main, so everything the report quotes still comes out
+Called from tables.main, so everything the report quotes still comes out
 of code rather than out of prose.
 """
 from __future__ import annotations
@@ -8,7 +8,7 @@ from __future__ import annotations
 import numpy as np
 import pandas as pd
 
-from a2_common import OUT_DIR, CLASS_NAMES, CLASS_ORDER
+from common import OUT_DIR, CLASS_NAMES, CLASS_ORDER
 
 ORDER = ["k-NN", "k-NN + SMOTE", "tree", "tree + SMOTE"]
 SHORT = {"k-NN": "Neighbour", "k-NN + SMOTE": "Neighbour, os.",

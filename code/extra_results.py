@@ -1,4 +1,4 @@
-"""Step 13: the three extra result files the expanded report needs.
+"""The three extra result files the expanded report needs.
 
   rev_trainsize.csv  the four configurations scored on the tuning partition and
                      on the evaluation partition, which differ by 3.4x in
@@ -14,7 +14,7 @@ import re
 import numpy as np
 import pandas as pd
 
-from a2_common import OUT_DIR
+from common import OUT_DIR
 
 RAW = os.environ.get("A2_DATA", "networkTraffic.csv")
 ORDER = ["k-NN", "k-NN + SMOTE", "tree", "tree + SMOTE"]
@@ -30,10 +30,10 @@ def train_size_comparison() -> None:
     """
     import json
     from sklearn.model_selection import StratifiedKFold, train_test_split
-    from a2_common import load_data, numeric_columns
-    from a2_step4_evaluate import TUNE_FRACTION
-    from a2_step8_thresholds import macro_f1_from_counts
-    from a2_step10_all_configs import knn_probs, tree_probs
+    from common import load_data, numeric_columns
+    from evaluate import TUNE_FRACTION
+    from multipliers_tree import macro_f1_from_counts
+    from final_eval import knn_probs, tree_probs
 
     tb = json.load(open(f"{OUT_DIR}/retune_f1_best_tree.json"))["tree"]
     arr = np.load(f"{OUT_DIR}/allconfig_multipliers.npy")

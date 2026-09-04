@@ -13,9 +13,9 @@ from sklearn.model_selection import train_test_split
 from sklearn.pipeline import Pipeline
 from sklearn.tree import DecisionTreeClassifier
 
-from a2_common import (RANDOM_SEED, OUT_DIR, ensure_dirs, load_data,
+from common import (RANDOM_SEED, OUT_DIR, ensure_dirs, load_data,
                        numeric_columns, build_ct_preprocessor, log)
-import a2_step2_tune as T
+import tune as T
 
 LOGP = f"{OUT_DIR}/tune_log.txt"
 

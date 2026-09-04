@@ -1,4 +1,4 @@
-"""Step 11b: the leftover secondary metrics.
+"""The leftover secondary metrics.
 
 Appends each fold to disk as it finishes, because the first attempt died on the
 last fold and lost the lot.
@@ -20,10 +20,10 @@ from sklearn.model_selection import StratifiedKFold, train_test_split
 from sklearn.metrics import (accuracy_score, balanced_accuracy_score,
                              precision_score, recall_score)
 
-from a2_common import (RANDOM_SEED, OUT_DIR, ensure_dirs, load_data,
+from common import (RANDOM_SEED, OUT_DIR, ensure_dirs, load_data,
                        numeric_columns, log)
-from a2_step4_evaluate import TUNE_FRACTION, TRAIN_PROBE
-from a2_step10_all_configs import knn_probs, tree_probs
+from evaluate import TUNE_FRACTION, TRAIN_PROBE
+from final_eval import knn_probs, tree_probs
 
 LOGP = f"{OUT_DIR}/supplement_log.txt"
 OUTP = f"{OUT_DIR}/v2_supplement.csv"
@@ -101,7 +101,7 @@ def main():
                            recall_macro_pooled=float(r)))
         log(f"  pooled {n:14s} precision={p:.4f} recall={r:.4f}", LOGP)
     pd.DataFrame(pooled).to_csv(f"{OUT_DIR}/v2_pooled_pr.csv", index=False)
-    log("step 11b complete", LOGP)
+    log("supplement complete", LOGP)
     print("DONE")
 
 
